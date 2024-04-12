@@ -30,9 +30,19 @@ export const Table = () => {
   };
 
   const handleEditRecord = (ID, field, value) => {
-    const updatedData = data.map((record) =>
-      record.ID === ID ? { ...record, [field]: value } : record
-    );
+    const updatedData = data.map((record) => {
+      if (record.ID === ID) {
+        const isDuplicateID = data.some((r) => r.ID !== ID && r.ID === parseInt(value));
+        if (isDuplicateID) {
+          alert('ID already exists. Please enter a unique ID.');
+          return record;
+        } else {
+          return { ...record, [field]: field === 'ID' ? parseInt(value) : value };
+        }
+      } else {
+        return record;
+      }
+    });
     setData(updatedData);
   };
 
