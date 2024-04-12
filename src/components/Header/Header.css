@@ -1,0 +1,112 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    box-shadow: 0 1px 3px -2px black;
+    height: 80px;
+}
+.logo{
+    width: 75px;
+    height: 35px;
+    cursor: pointer;
+}
+.header_dropdown{
+    width: 8%;
+}
+.header-menu{
+    display: none;
+    height: 100px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    background-color: rgba(199, 241, 255, 0.838);
+    justify-content: center;
+    align-items: center;
+    top: 65px;
+    flex-direction: column;
+    padding: 0;
+}
+.header-menu li{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background: #419dff;
+}
+.header-menu-visible{
+    display: flex;
+}
+.header_dropdown{
+    display: block;
+    width: 30px;
+    transition: 0.6s;
+}
+.header_dropdown.open{
+    transform: rotate(180deg);
+    transition: 1s;
+}
+@media (min-width: 500px)  {
+    .logo{
+        width: 100px;
+        height: 40px;
+    }
+    header{
+        padding: 0 30px 0 30px;
+    }
+    .header-menu li{
+        font-size: 17px;
+    }    
+}
+@media (min-width: 800px) {
+    .header_dropdown{
+        display: none;
+    }
+    .header-menu{
+        display: flex;
+        position: relative;
+        width: 100%;
+        top: 0;
+        flex-direction: row;
+        background: none;
+        justify-content: right;
+        gap: 10px;
+    }
+    .header-menu li{
+        font-size: 18px;
+    }
+}
+@media(min-width: 1024px){
+    .logo{
+        width: 120px;
+        height: 50px;
+    }
+    .header-menu li{
+        font-size: 20px;
+    }
+    header{
+        padding: 0 40px 0 40px;
+    }
+}
+@media(min-width: 1280px){
+    .header-menu{
+        gap: 12px;
+        padding-right: 10px;
+    }
+    .logo{
+        width: 130px;
+        height: 60px;
+    }
+    .header-menu li{
+        font-size: 22px;
+    }
+}

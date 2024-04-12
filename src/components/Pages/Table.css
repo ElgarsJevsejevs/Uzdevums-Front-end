@@ -1,0 +1,130 @@
+table{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 400px;
+    height: 150px;
+    max-width: 400px;
+}
+.table_container{   
+    padding: 20px;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: calc(85vh - 100px)
+}
+td, th{
+    border: 1px solid;
+}
+td,th{
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+thead{
+    border: 2px solid;
+}
+.add_img, .delete_button{
+    width: 20px;
+    height: 20px;
+}
+.next_button, .previous_button, .delete_button{
+    cursor: pointer;
+}
+td button{
+    padding: 0;
+}
+.delete_button{
+    border: none;
+}
+button{
+    background-color: white;
+}
+.next_button{
+    width: 19px;
+    height: 15px;
+}
+.previous_button{
+    width: 19px;
+    height: 15px;
+    rotate: 180deg;
+}
+.page_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.page_container .button_navigation_container{
+    display: flex;
+    padding-right: 10px;
+}
+.select_container{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+input{
+    padding: 5px;
+}
+.add_button{
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+.select_container select{
+margin-left: 10px;
+}
+@media(min-width: 500px) {
+    .table_container{
+        padding-top: 40px;
+    }
+}
+@media(min-width: 800px) {
+    table{
+        width: 500px;
+        max-width: 500px;
+    }
+}
+@media(min-width: 1024px) {
+    table{
+        width: 700px;
+        max-width: 700px;
+        font-size: 18px;
+    }
+    .add_button{
+        padding: 5px;
+    }
+}
+@media(min-width: 1280px) {
+    table{
+        width: 900px;
+        max-width: 900px;
+        font-size: 20px;
+    }
+    .delete_button{
+        width: 30px;
+        height: 30px;
+    }
+    .add_button{
+        padding: 10px;
+    }
+    .next_button, .previous_button{
+        padding: 5px;
+    }
+    .select_container{
+        font-size: 18px;
+    }
+    .select_container select{
+        padding: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .table_container input{
+        padding: 10px;
+        width: 200px;
+    }
+}
