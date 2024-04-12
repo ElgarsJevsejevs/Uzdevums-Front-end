@@ -86,10 +86,10 @@ export const Table = () => {
         <tbody>
           {filteredRecords.map((record) => (
             <tr key={record.ID}>
-              <td contentEditable onBlur={(e) => handleEditRecord(record.ID, 'ID', e.target.textContent)}>{record.ID}</td>
-              <td contentEditable onBlur={(e) => handleEditRecord(record.ID, 'Name', e.target.textContent)}>{record.Name}</td>
-              <td contentEditable onBlur={(e) => handleEditRecord(record.ID, 'Age', e.target.textContent)}>{record.Age}</td>
-              <td contentEditable onBlur={(e) => handleEditRecord(record.ID, 'Country', e.target.textContent)}>{record.Country}</td>
+              <td contentEditable suppressContentEditableWarning={true} onBlur={(e) => handleEditRecord(record.ID, 'ID', e.target.textContent)}>{record.ID}</td>
+              <td contentEditable suppressContentEditableWarning={true} onBlur={(e) => handleEditRecord(record.ID, 'Name', e.target.textContent)}>{record.Name}</td>
+              <td contentEditable suppressContentEditableWarning={true} onBlur={(e) => handleEditRecord(record.ID, 'Age', e.target.textContent)}>{record.Age}</td>
+              <td contentEditable suppressContentEditableWarning={true} onBlur={(e) => handleEditRecord(record.ID, 'Country', e.target.textContent)}>{record.Country}</td>
               <td>
                 <button className='delete_button' onClick={() => handleDeleteRecord(record.ID)}><img className='delete_button' src={deleteButton} alt=''/></button>
               </td>
